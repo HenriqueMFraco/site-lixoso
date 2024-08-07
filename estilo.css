@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    color: #edf1d0;
+    background-color: #234d00;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao header */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #edf1d0; /* Define a cor do link */
+    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Muda a cor do link quando o mouse passa sobre ele */
+}
+
+main {
+    position: relative;
+    padding-top: 60px; /* Adiciona espaço para não esconder o conteúdo atrás do header */
+    background: url('tv tubao.png') no-repeat center center;
+    background-size: cover; /* Faz com que a imagem de fundo cubra todo o elemento */
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    z-index: 1; /* Garante que o main fique atrás dos divs das imagens */
+}
+
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(8px); /* Ajuste o nível de desfoque conforme necessário */
+    z-index: -1; /* Faz com que o desfoque fique atrás do conteúdo */
+}
+
+#caminhao1div, #caminhao2div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%; /* Cada div ocupa 50% da largura */
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    z-index: 2; /* Garante que as divs com as imagens fiquem acima do main */
+}
+
+#caminhao1div {
+    left: 0;
+}
+
+#caminhao2div {
+    right: 0;
+}
+
+#caminhao1div img, #caminhao2div img {
+    max-width: 100%;
+    height: auto;
+}
+
+#caminhao2div img {
+    transform: scaleX(-1);  
+}
