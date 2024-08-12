@@ -11,7 +11,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 999;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 nav ul {
@@ -27,22 +27,63 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #edf1d0; /* Define a cor do link */
-    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+    text-decoration: none; 
+    color: #edf1d0;
+    font-size: 18px; 
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Muda a cor do link quando o mouse passa sobre ele */
+    color: #ffcc00; 
 }
 
 main {
     position: relative;
-    padding-top: 60px; /* Adiciona espaço para não esconder o conteúdo atrás do header */
+    padding-top: 60px; 
     background: url('tv tubao.png') no-repeat center center;
-    background-size: cover; /* Faz com que a imagem de fundo cubra todo o elemento */
-    height: 100vh; /* Ocupa toda a altura da viewport */
-    z-index: 1; /* Garante que o main fique atrás dos divs das imagens */
+    background-size: cover; 
+    height: 100vh; 
+    z-index: 1; 
+}
+
+.footer {
+    background-color: #234d00; 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-info, .social-media {
+    flex: 1;
+    margin: 10px;
+    min-width: 150px;
+}
+
+.contact-info h3, .social-media h3 {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    display: block;
+    margin: 5px 0;
+    color: #11c028;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: none;
 }
 
 .background-blur {
@@ -52,8 +93,8 @@ main {
     width: 100%;
     height: 100%;
     background: inherit;
-    filter: blur(8px); /* Ajuste o nível de desfoque conforme necessário */
-    z-index: -1; /* Faz com que o desfoque fique atrás do conteúdo */
+    filter: blur(8px); 
+    z-index: -1; 
 }
 
 #caminhao1div, #caminhao2div {
@@ -63,9 +104,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%; /* Cada div ocupa 50% da largura */
-    height: 100vh; /* Ocupa toda a altura da viewport */
-    z-index: 2; /* Garante que as divs com as imagens fiquem acima do main */
+    width: 50%;
+    height: 100vh;
+    z-index: 2; 
 }
 
 #caminhao1div {
@@ -91,18 +132,18 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Garante que o container não interfira na interação com outros elementos */
-    z-index: 1; /* Certifica-se de que os flocos fiquem atrás do conteúdo, mas na frente do fundo */
+    pointer-events: none; 
+    z-index: 1; 
     overflow: hidden;
 }
 
 .snowflake {
     position: absolute;
-    width: 30px; /* Ajuste o tamanho conforme necessário */
+    width: 30px; 
     height: 30px;
-    background: url('sascodelixo.png') no-repeat center center; /* Define a imagem do floco de neve */
+    background: url('sascodelixo.png') no-repeat center center; 
     background-size: cover;
-    opacity: 0.9; /* Ajuste a opacidade conforme necessário */
+    opacity: 0.9; 
     pointer-events: none;
 }
 
@@ -123,24 +164,46 @@ main {
     left: 0;
     padding-top: 100px;
     padding-left: 50px;
-    width: 400px; /* Ajuste a largura da div conforme necessário */
-    height: 260px; /* Ajuste a altura da div conforme necessário */
-    z-index: 2; /* Garante que a div fique acima do fundo */
+    width: 400px; 
+    height: 260px; 
+    z-index: 2; 
 }
 
 #planta img {
     max-width: 1000px;
-    border: 8px solid #11c028; /* Adiciona uma borda de 2px de largura e cor amarela (#ffcc00) */
-    border-radius: 20px; /* Adiciona bordas arredondadas, ajuste o valor conforme necessário */
+    border: 8px solid #11c028; 
+    border-radius: 20px;
+}
+
+#deposit{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(20%, -50%); 
+    background: #fffeeb;
+    z-index: 2; 
+    border-radius: 20px;
+    width: 780px;
+    height: 300px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
 }
 
 #sobre {
     position: absolute;
-    top: 50%; /* Centraliza verticalmente na viewport */
-    left: 50%; /* Centraliza horizontalmente na viewport */
-    transform: translate(-140%, -50%); /* Ajusta o centro exato da div */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     background: #ffffff;
-    z-index: 2; /* Garante que a div fique acima do fundo */
+    z-index: 2; 
     border-radius: 20px;
     width: 600px;
     height: 300px;
@@ -149,5 +212,51 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra à div para destaque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}
+
+#trabalhadores{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-110%, -50%);
+    z-index: 2;
+    width: 800px;
+    height: 600px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#trabalhadores img {
+    max-width: 1000px;
+    border: 8px solid #11c028; 
+    border-radius: 20px; 
+}
+
+#trabalhadoresinfo{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(40%, -50%); 
+    background: #fffcc1;
+    z-index: 2; 
+    border-radius: 20px;
+    width: 600px;
+    height: 300px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
 }
