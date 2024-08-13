@@ -107,6 +107,7 @@ main {
     width: 50%;
     height: 100vh;
     z-index: 2; 
+    cursor: pointer;
 }
 
 #caminhao1div {
@@ -117,13 +118,28 @@ main {
     right: 0;
 }
 
-#caminhao1div img, #caminhao2div img {
+#caminhao1div img{
     max-width: 100%;
     height: auto;
 }
 
 #caminhao2div img {
+    max-width: 100%;
+    height: auto;
     transform: scaleX(-1);  
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 0.5s linear infinite;
 }
 
 #snow-container {
@@ -195,6 +211,26 @@ main {
     font-weight: 400;
     font-style: normal;
     font-size: 22px;
+}
+
+#textoprincipal{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-25%, -90%); 
+    z-index: 2; 
+    border-radius: 20px;
+    width: 600px;
+    height: 300px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
 }
 
 #sobre {
